@@ -807,6 +807,35 @@
             color: #333;
             font-size: 14px;
         }
+        .floating-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50px;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 9999;
+}
+
+.floating-whatsapp:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.05);
+}
+
+.whatsapp-icon {
+    width: 22px;
+    height: 22px;
+}
     </style>
 </head>
 <body>
@@ -1029,9 +1058,11 @@
     </div>
 
     <!-- Floating Button -->
-    <div class="floating-btn" onclick="window.open('https://wa.me/212662617837', '_blank')">
-        📞 Appeler
-    </div>
+    <div class="floating-whatsapp" 
+     onclick="window.open('https://wa.me/212662617837?text=Bonjour%2C%20je%20viens%20de%20la%20landing%20page%20de%20Body%20Winter%20et%20j%27aimerais%20avoir%20plus%20d%27informations.', '_blank')">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
+    <span>Discuter sur WhatsApp</span>
+</div>
 
     <script>
     // --- FAQ Toggle ---
